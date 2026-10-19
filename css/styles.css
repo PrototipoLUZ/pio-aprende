@@ -78,3 +78,9 @@ h1{font-size:2rem;margin:6px 0 2px;text-align:center;font-weight:800}
 .big{border:0;border-radius:28px;background:var(--sun);color:#1B2A49;font:inherit;font-size:1.6rem;font-weight:800;padding:14px 28px;box-shadow:0 6px 0 rgba(0,0,0,.2);cursor:pointer;margin:8px auto;display:block}
 .big.alt{background:var(--card);color:var(--ink)}
 .stars{font-size:3rem;text-align:center;animation:pop .6s}
+
+/* =========================================================
+   8. PANTALLA DE BIENVENIDA
+   ========================================================= */
+.welcome{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:80vh}
+.big.play{font-size:2.2rem;padding:20px 48px;background:var(--ok);color:#fff;animation:pop .8s}

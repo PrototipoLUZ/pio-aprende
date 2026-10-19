@@ -17,6 +17,8 @@ export const CONFIG = {
 export const TEXTS = {
   title: 'Pío aprende jugando',
   subtitle: '¡Toca un juego!',
+  play: '▶ ¡Jugar!',                                  // botón de la pantalla de bienvenida
+  welcomeVoice: '¡Hola! Soy Pío. ¡Vamos a jugar!',   // lo que dice Pío al empezar
   praise: ['¡Muy bien!', '¡Genial!', '¡Lo lograste!', '¡Excelente!'],
   retry: ['¡Casi! Intenta otra vez', 'Ups, prueba con otra', '¡Tú puedes! Otra vez'],
   hint: '¡Mira! Toca el que brilla',

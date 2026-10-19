@@ -50,3 +50,17 @@ export function say(text) {
 export function stopSpeaking() {
   try { speechSynthesis.cancel(); } catch (e) {}
 }
+
+/* =========================================================
+   DESBLOQUEO DE AUDIO (se llama desde la pantalla de bienvenida)
+   Los celulares no permiten sonido ni voz hasta que el niño toca
+   la pantalla. Esta función se ejecuta en ese primer toque.
+   ========================================================= */
+export function unlockAudio() {
+  try {
+    ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();   // activa el audio en iPhone/Chrome
+  } catch (e) {}
+  tone(880, 0, 0.12);                               // pitido corto: confirma que hay sonido
+  try { speechSynthesis.cancel(); speechSynthesis.resume(); } catch (e) {} // activa la voz
+}

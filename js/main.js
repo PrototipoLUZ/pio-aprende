@@ -1,6 +1,7 @@
 /* =========================================================
-   PUNTO DE ENTRADA: conecta el menú con el motor del juego
+   PUNTO DE ENTRADA: bienvenida → menú → juego
    ========================================================= */
+import { showWelcome } from './ui/welcome.js';
 import { showMenu } from './ui/menu.js';
 import { playSection } from './core/game.js';
 
@@ -11,4 +12,5 @@ function goHome() {
   showMenu(app, (section) => playSection(app, section, goHome));
 }
 
-goHome();
+// Se empieza por la bienvenida (solo al abrir la página); luego siempre se vuelve al menú.
+showWelcome(app, goHome);
